@@ -1,6 +1,7 @@
 import { Search, ShoppingCart, Bell, Heart, ChevronLeft, ChevronRight, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import Image from 'next/image';
 import Link from "next/link"
 
 export default function Home() {
@@ -12,12 +13,14 @@ export default function Home() {
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <div className="relative w-14 h-10">
-                <svg viewBox="0 0 60 40" className="w-full h-full">
-                  <path d="M20 10 A10 10 0 1 0 20 30 A10 10 0 1 0 20 10 Z" fill="#00A3D7" />
-                  <path d="M40 10 A10 10 0 1 0 40 30 A10 10 0 1 0 40 10 Z" fill="#E6316F" />
-                  <path d="M30 10 A10 10 0 1 0 30 30 A10 10 0 1 0 30 10 Z" fill="#9E2F92" opacity="0.5" />
-                </svg>
+                <Image
+                  src="/logo.png" // Caminho para o seu logo
+                  alt="Logo"
+                  layout="fill" // Permite que a imagem preencha o contêiner
+                  objectFit="contain" // Garante que a imagem seja redimensionada para caber dentro do contêiner
+                />
               </div>
+              <span className="ml-2 font-bold text-lg text-black">Caminho do Negócio</span> {/* Título */}
             </Link>
 
             {/* Search */}
